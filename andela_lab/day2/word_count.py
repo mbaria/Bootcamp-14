@@ -1,20 +1,22 @@
-def words(phrase):
-	#from collections import Counter
-	list_words = phrase.split()
-	temp_out = {}
-	#temp_out = dict(Counter(list_words))
-	for elem in list_words:
-		if elem in temp_out:
-			continue
-		else:
-			temp_out[elem] = list_words.count(elem)
+def words_count(my_word):
+	
+		my_dict ={}
+		
+		unique_word = set(my_word)
+		#the loop picks all the unique words in list
+		for word in unique_word:
+			count = 0
+			
+			for n in my_word.split():
+				
+				if word  == n:
+					count = count + 1
+					
+					if word.isdigit() == True:
+							word = int(word)
+							
+			my_dict[word] = count
+	
 
-	out = {}
+		return my_dict
 
-	for item in temp_out.items():
-		if item[0].isdigit():
-			out[int(item[0])] = item[1]
-		else:
-			out[item[0]] = item[1]
-
-	return out
