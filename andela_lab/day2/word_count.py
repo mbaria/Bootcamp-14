@@ -2,7 +2,7 @@ def words_count(my_word):
 	
 		my_dict ={}
 		
-		unique_word = set(my_word)
+		unique_word = my_word.split()
 		#the loop picks all the unique words in list
 		for word in unique_word:
 			count = 0
