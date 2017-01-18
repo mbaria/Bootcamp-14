@@ -8,6 +8,7 @@ def words_count(my_word):
 			count = 0
 			
 			for n in my_word.split():
+				#compare the loop variables
 				
 				if word  == n:
 					count = count + 1
